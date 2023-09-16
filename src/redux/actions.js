@@ -18,3 +18,10 @@ export const deleteListing = (index) => {
     value: index,
   };
 };
+
+export const createListing = (listing) => {
+  return {
+    type: "CREATE_LISTING",
+    value: listing,
+  };
+};

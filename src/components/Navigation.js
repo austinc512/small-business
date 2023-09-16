@@ -6,7 +6,6 @@ import cookie from "cookie";
 
 const Navigation = (props) => {
   const navigate = useNavigate();
-  console.log(document.cookie);
   console.log(props);
   return (
     <AppBar position="relative" style={{ backgroundColor: "#00b36b" }}>
@@ -18,6 +17,9 @@ const Navigation = (props) => {
           <li className="nav-list-item">
             <Link to="/">Listings</Link>
           </li>
+          {document.cookie.includes("loggedIn=true") ? (
+            <Link to="/add">Add</Link>
+          ) : null}
           <li
             className="nav-list-item"
             onClick={() => {

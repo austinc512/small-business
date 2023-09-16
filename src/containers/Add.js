@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 // import the visual React component "Home"
-import Listings from "../components/Listings";
-import { deleteListing, logOutUser } from "../redux/actions";
+import Add from "../components/Add";
+import { createListing } from "../redux/actions";
 
 const mapStateToProps = (state) => {
   return {
@@ -12,8 +12,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    deleteListing: (index) => dispatch(deleteListing(index)),
-    logOutUser: () => dispatch(logOutUser()),
+    createListing: (user) => dispatch(createListing(user)),
   };
 };
 
@@ -22,4 +21,4 @@ const mapDispatchToProps = (dispatch) => {
 
 // wrap the visual React Component "Home" with the Redux Container Component Home
 // note currying syntax - also called partial application
-export default connect(mapStateToProps, mapDispatchToProps)(Listings);
+export default connect(mapStateToProps, mapDispatchToProps)(Add);

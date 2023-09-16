@@ -29,7 +29,7 @@ const Login = (props) => {
     // set cookie here
     // this maxAge configuration is in seconds, not ms
     document.cookie = cookie.serialize("loggedIn", true, {
-      maxAge: 60,
+      maxAge: 60 * 60,
     });
 
     navigate("/");

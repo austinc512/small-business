@@ -82,3 +82,16 @@ table {
 .underline {
   text-decoration: underline;
 }
+
+.l-r-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  /* gap: 1rem; */
+}
+
+.add-left,
+.add-right {
+  flex-grow: 1;
+}
