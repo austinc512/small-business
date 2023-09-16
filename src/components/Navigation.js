@@ -4,9 +4,10 @@ import { AppBar, Toolbar, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import cookie from "cookie";
 
-const Navigation = () => {
+const Navigation = (props) => {
   const navigate = useNavigate();
   console.log(document.cookie);
+  console.log(props);
   return (
     <AppBar position="relative" style={{ backgroundColor: "#00b36b" }}>
       <Toolbar>
@@ -23,6 +24,7 @@ const Navigation = () => {
               document.cookie = cookie.serialize("loggedIn", null, {
                 maxAge: 0,
               });
+              props.logOutUser();
               navigate("/login");
             }}
           >

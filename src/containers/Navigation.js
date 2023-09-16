@@ -1,18 +1,10 @@
 import { connect } from "react-redux";
 // import the visual React component "Home"
-import Login from "../components/Login";
-import { logInUser, logOutUser } from "../redux/actions";
-
-const mapStateToProps = (state) => {
-  return {
-    businesses: state.businesses,
-    username: state.username,
-  };
-};
+import Navigation from "../components/Navigation";
+import { logOutUser } from "../redux/actions";
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    logInUser: (user) => dispatch(logInUser(user)),
     logOutUser: () => dispatch(logOutUser()),
   };
 };
@@ -22,4 +14,4 @@ const mapDispatchToProps = (dispatch) => {
 
 // wrap the visual React Component "Home" with the Redux Container Component Home
 // note currying syntax - also called partial application
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(Navigation);

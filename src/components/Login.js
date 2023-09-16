@@ -3,9 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { TextField, Button, Container } from "@mui/material";
 import cookie from "cookie";
 
-const Login = () => {
+const Login = (props) => {
   const navigate = useNavigate();
-
   const [state, setState] = useState({
     username: "",
     password: "",
@@ -22,6 +21,9 @@ const Login = () => {
   };
 
   const login = (e) => {
+    // console.log(state.username);
+    // console.log(state);
+    props.logInUser(state.username);
     console.log(`login form submitted`);
     e.preventDefault();
     // set cookie here

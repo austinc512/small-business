@@ -1,22 +1,24 @@
 import React from "react";
-import { Card, CardContent, CardActions, Divider } from "@mui/material";
+// import { Card, CardContent, CardActions, Divider } from "@mui/material";
 import { Link } from "react-router-dom";
 import {
-  Container,
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableRow,
 } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
+// import DeleteIcon from "@mui/icons-material/Delete";
 
 const Listings = (props) => {
-  console.log(props.businesses);
+  console.log(props);
   //   const cars = props.cars;
   //   console.log(cars);
   return (
     <div className="card-container">
+      {props.username && (
+        <div className="top-level-user">Logged in as: {props.username}</div>
+      )}
       <Table>
         <TableHead>
           <TableRow>
