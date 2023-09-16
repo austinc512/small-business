@@ -8,7 +8,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-// import DeleteIcon from "@mui/icons-material/Delete";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const Listings = (props) => {
   console.log(props);
@@ -26,6 +26,7 @@ const Listings = (props) => {
             <TableCell>Description</TableCell>
             <TableCell>Hours</TableCell>
             <TableCell>Address</TableCell>
+            {props.username && <TableCell>Delete</TableCell>}
           </TableRow>
         </TableHead>
         <TableBody>
@@ -33,11 +34,21 @@ const Listings = (props) => {
             return (
               <TableRow key={index}>
                 <TableCell>
-                  <Link to={`/details/${business.id}`}>{business.name}</Link>
+                  <Link to={`/details/${business.id}`} className="underline">
+                    {business.name}
+                  </Link>
                 </TableCell>
                 <TableCell>{business.description}</TableCell>
                 <TableCell>{business.hours}</TableCell>
                 <TableCell>{business.address}</TableCell>
+                {props.username && (
+                  <TableCell>
+                    <DeleteIcon
+                      onClick={() => props.deleteListing(index)}
+                      className="text-red"
+                    />
+                  </TableCell>
+                )}
               </TableRow>
             );
           })}

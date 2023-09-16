@@ -11,3 +11,10 @@ export const logOutUser = () => {
     value: "",
   };
 };
+
+export const deleteListing = (index) => {
+  return {
+    type: "DELETE_LISTING",
+    value: index,
+  };
+};

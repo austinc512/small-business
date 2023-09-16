@@ -64,3 +64,21 @@ table {
   width: 83% !important;
   margin: 2rem auto;
 }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  gap: 15px;
+}
+
+.text-red {
+  color: red;
+}
+.text-red:hover {
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
+}
