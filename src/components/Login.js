@@ -41,6 +41,7 @@ const Login = (props) => {
         <form className="login-form" onSubmit={login}>
           <TextField
             required
+            variant="standard"
             onChange={handleTextChange}
             value={state.username}
             name="username"
@@ -49,6 +50,7 @@ const Login = (props) => {
           />
           <TextField
             required
+            variant="standard"
             onChange={handleTextChange}
             value={state.password}
             name="password"

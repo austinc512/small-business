@@ -15,13 +15,18 @@ function Details(props) {
   }
 
   return (
-    <div className="details">
-      <h1>{business.name}</h1>
-      <h3>{business.address}</h3>
-      <h3>{business.hours}</h3>
-      <p>{business.description}</p>
-      <h2>(Maps will go here eventually)</h2>
-    </div>
+    <>
+      {props.username && (
+        <div className="top-level-user">Logged in as: {props.username}</div>
+      )}
+      <div className="details">
+        <h1>{business.name}</h1>
+        <h3>{business.address}</h3>
+        <h3>{business.hours}</h3>
+        <p>{business.description}</p>
+        <h2>(Maps will go here eventually)</h2>
+      </div>
+    </>
   );
 }
 

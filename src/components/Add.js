@@ -87,11 +87,11 @@ const Add = (props) => {
 
               <Button
                 type="submit"
-                className="login-button"
+                className="add-button"
                 variant="contained"
-                color="primary"
+                color="secondary"
               >
-                Login
+                SAVE
               </Button>
             </form>
           </Container>
