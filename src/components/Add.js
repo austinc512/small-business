@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Container } from "@mui/material";
-import cookie from "cookie";
 
 const Add = (props) => {
   const navigate = useNavigate();
@@ -23,21 +22,33 @@ const Add = (props) => {
   };
 
   const handleSubmit = (e) => {
-    // console.log(state.username);
-    // console.log(state);
-    props.logInUser(state.username);
-    console.log(`login form submitted`);
     e.preventDefault();
-    // set cookie here
-    // this maxAge configuration is in seconds, not ms
-    document.cookie = cookie.serialize("loggedIn", true, {
-      maxAge: 60 * 60,
-    });
+    console.log(`Add listing form submitted`);
+    console.log(state);
 
+    let newId = 0;
+    console.log(props.businesses);
+    for (let item of props.businesses) {
+      console.log("item", item);
+      if (item.id > newId) {
+        console.log(`item.id > newId block`);
+        newId = item.id;
+      }
+    }
+    newId++;
+    let newListing = {};
+    newListing["id"] = newId;
+    for (let item of Object.entries(state)) {
+      console.log(item);
+      // transfer properties of object
+      newListing[item[0]] = item[1];
+    }
+    console.log(newListing);
+    props.createListing(newListing);
+    // navigate to root page
     navigate("/");
   };
-  console.log(`Add component props`);
-  console.log(props);
+
   return (
     <div>
       {props.username && (
@@ -51,6 +62,7 @@ const Add = (props) => {
               <TextField
                 required
                 variant="standard"
+                className="add-inputs"
                 onChange={handleTextChange}
                 value={state.name}
                 name="name"
@@ -60,6 +72,7 @@ const Add = (props) => {
               <TextField
                 required
                 variant="standard"
+                className="add-inputs"
                 onChange={handleTextChange}
                 value={state.address}
                 name="address"
@@ -69,6 +82,7 @@ const Add = (props) => {
               <TextField
                 required
                 variant="standard"
+                className="add-inputs"
                 onChange={handleTextChange}
                 value={state.hours}
                 name="hours"
@@ -77,7 +91,9 @@ const Add = (props) => {
               />
               <TextField
                 required
+                multiline
                 variant="standard"
+                className="add-inputs"
                 onChange={handleTextChange}
                 value={state.description}
                 name="description"
