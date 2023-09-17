@@ -11,9 +11,7 @@ import {
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const Listings = (props) => {
-  console.log(props);
-  //   const cars = props.cars;
-  //   console.log(cars);
+  // console.log(props);
   return (
     <div className="card-container">
       {props.username && (
@@ -44,7 +42,11 @@ const Listings = (props) => {
                 {props.username && (
                   <TableCell>
                     <DeleteIcon
-                      onClick={() => props.deleteListing(index)}
+                      onClick={() => {
+                        console.log(`deleting this listing:`);
+                        console.log(props.businesses[index]);
+                        props.deleteListing(index);
+                      }}
                       className="text-red"
                     />
                   </TableCell>
