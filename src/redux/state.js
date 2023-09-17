@@ -21,7 +21,7 @@ const initialState = {
       id: 3,
       name: "Magnolia Cafe",
       description:
-        "The Magnolia Cafe offers full service for dine-in customers, both indoors and outside on our  garden patio. For take-out, you can pickup curbside in your car. Contact-Free payment is made through our online ordering platform.",
+        "Your friendly neighborhood fresh-food diner since 1979, The Magnolia Cafe offers full service for dine-in customers, both indoors and outside on our  garden patio. Through the decades, we have had the privilege of seeing multiple generations of our community from near and far come through our doors and create memories in our booths.",
       address: "1920 S Congress Ave, Austin, TX 78704",
       hours: "8AM - 10PM",
     },
