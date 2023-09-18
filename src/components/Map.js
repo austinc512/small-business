@@ -1,3 +1,6 @@
+// this component is a failed attempt at maps functionality
+// refer to ListingMap.js for the actual functionality
+
 import React, { useEffect, useState } from "react";
 import GoogleMapReact from "google-map-react";
 // import image from "../images/mapPin.png";
@@ -186,12 +189,12 @@ export default Map;
 //   }
 // }
 
-// // ReactDOM.render(
-// //   <div style={{ width: "100%", height: "400px" }}>
-// //     <SimpleMap />
-// //   </div>,
-// //   document.getElementById("main")
-// // );
+// ReactDOM.render(
+//   <div style={{ width: "100%", height: "400px" }}>
+//     <SimpleMap />
+//   </div>,
+//   document.getElementById("main")
+// );
 
 // export default SimpleMap;
 

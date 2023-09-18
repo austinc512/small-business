@@ -112,9 +112,6 @@ const Add = (props) => {
             </form>
           </Container>
         </div>
-        <div className="add-right">
-          <h2>Add map here plz</h2>
-        </div>
       </div>
     </div>
   );

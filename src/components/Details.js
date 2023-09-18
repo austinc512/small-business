@@ -2,7 +2,7 @@ import React from "react";
 import ListingMap from "./ListingMap";
 
 function Details(props) {
-  console.log(props.address);
+  // console.log(props);
   const urlStuff = window.location.href.split("/");
   const targetBusiness = urlStuff[urlStuff.length - 1];
   // this seems insanely hacky, but it works
@@ -29,7 +29,7 @@ function Details(props) {
       </div>
       <ListingMap
         address={business.address}
-        style={{ height: "50vh", width: "1000px" }}
+        style={{ height: "50vh", width: "100%" }}
       />
     </div>
   );
