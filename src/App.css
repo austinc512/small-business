@@ -112,3 +112,13 @@ table {
 .css-v4u5dn-MuiInputBase-root-MuiInput-root {
   margin-top: 12px !important;
 }
+
+/* div {
+  min-height: 100px;
+} */
+
+.dang-ol-map {
+  height: 50%;
+  width: 50%;
+  margin: auto;
+}

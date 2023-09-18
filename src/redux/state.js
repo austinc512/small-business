@@ -14,7 +14,7 @@ const initialState = {
       name: "Lucy's Fried Chicken",
       description:
         "One of Austin's favorite homegrown restaurants, Lucy's Fried Chicken is helmed by local chef James Holmes. The offerings include fresh gulf oysters, an innovative take on comfort food classics, and fried chicken that's pretty dang perfect. Freshly-made sides, salads, and pies round out the menu while the bar offers creative craft cocktails and plenty of cold beer. 7 days a week — lunch, dinner, and weekend brunch.",
-      address: "1415 S Congress Ave, Austin, TX 78704",
+      address: "2218 COLLEGE AVE AUSTIN, TX 78704",
       hours: "11AM - 9PM",
     },
     {

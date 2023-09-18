@@ -7,9 +7,6 @@ import cookie from "cookie";
 const Navigation = (props) => {
   const navigate = useNavigate();
   // console.log(props);
-  console.log(process.env);
-  const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-  console.log(apiKey);
   return (
     <AppBar position="relative" style={{ backgroundColor: "#00b36b" }}>
       <Toolbar>

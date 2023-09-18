@@ -1,6 +1,8 @@
 import React from "react";
+import ListingMap from "./ListingMap";
 
 function Details(props) {
+  console.log(props.address);
   const urlStuff = window.location.href.split("/");
   const targetBusiness = urlStuff[urlStuff.length - 1];
   // this seems insanely hacky, but it works
@@ -15,7 +17,7 @@ function Details(props) {
   }
 
   return (
-    <>
+    <div style={{ width: "100%", height: "100vh" }}>
       {props.username && (
         <div className="top-level-user">Logged in as: {props.username}</div>
       )}
@@ -24,9 +26,12 @@ function Details(props) {
         <h3>{business.address}</h3>
         <h3>{business.hours}</h3>
         <p>{business.description}</p>
-        <h2>(Maps will go here eventually)</h2>
       </div>
-    </>
+      <ListingMap
+        address={business.address}
+        style={{ height: "50vh", width: "1000px" }}
+      />
+    </div>
   );
 }
 
